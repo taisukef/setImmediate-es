@@ -183,4 +183,8 @@
 
     attachTo.setImmediate = setImmediate;
     attachTo.clearImmediate = clearImmediate;
-}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+}(typeof self === "undefined" ? typeof global === "undefined" ? globalThis : global : self));
+
+const setImmediate = globalThis.setImmediate;
+const clearImmediate = globalThis.clearImmediate;
+export { setImmediate, clearImmediate };

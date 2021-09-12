@@ -52,16 +52,8 @@ For our last trick, we pull something out to make things fast in Internet Explor
 
 In the browser, include it with a `<script>` tag; pretty simple.
 
-In Node.js, do
-
-```
-npm install --save setimmediate
-```
-
-then
-
 ```js
-require("setimmediate");  // (somewhere early in your app; it attaches to the global scope.)
+import { setImmediate, clearImmediate } from "https://taisukef.github.io/setImmediate-es/setImmediate.js";
 ```
 
 
